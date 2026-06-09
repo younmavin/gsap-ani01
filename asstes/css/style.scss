@@ -91,7 +91,7 @@ body {
     gap: 1rem;
     border-radius: 3rem;
     transition: all 0.3s;
-
+    cursor: pointer;
     &:hover {
       background-color: $white-color;
       scale: 1.1;
