@@ -1,0 +1,97 @@
+@use './abstracts/_variables' as *;
+@use './abstracts/_mixins' as *;
+
+.footer {
+  background-color: $gray-color;
+  min-height: 30rem;
+  width: 100%;
+
+  &-inner {
+    padding: 6rem;
+    @include flex-center;
+    flex-direction: column;
+
+    .btn-link {
+      border: 1px solid $white-color;
+      padding: 1rem 3rem;
+      color: #fff;
+      font-size: 2.2rem;
+      border-radius: 3rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: all 0.3s;
+
+      &:hover {
+        scale: 1.1;
+        color: $black-color;
+        background-color: $white-color;
+      }
+    }
+
+    .address {
+      color: $main-color;
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $white-color;
+      }
+    }
+
+    .copyright {
+      color: $white-color;
+    }
+  }
+}
+
+aside {
+  position: fixed;
+  right: 40px;
+  bottom: 60px;
+  z-index: 99;
+  button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $gray-color;
+    border: 0;
+    font-weight: 600;
+    color: $white-color;
+    gap: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    @include flex-center;
+    flex-direction: column;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: $main-color;
+    }
+  }
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 0%;
+  background-color: $yellow-color;
+  z-index: 9999;
+  transition: width 0.1s;
+}
+@media screen and (max-width: 768px) {
+  aside {
+    right: 10px;
+    bottom: 10px;
+    button {
+      width: 45px;
+      height: 45px;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+}

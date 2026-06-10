@@ -1,6 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "GangwonEducationHyunokSam";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduHyeonokT_OTFMediumA.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -127,7 +131,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -146,6 +150,99 @@ img {
   display: block;
 }
 
+.footer {
+  background-color: #515151;
+  min-height: 30rem;
+  width: 100%;
+}
+.footer-inner {
+  padding: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer-inner .btn-link {
+  border: 1px solid #f7f4ef;
+  padding: 1rem 3rem;
+  color: #fff;
+  font-size: 2.2rem;
+  border-radius: 3rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s;
+}
+.footer-inner .btn-link:hover {
+  scale: 1.1;
+  color: #1a1a1a;
+  background-color: #f7f4ef;
+}
+.footer-inner .address {
+  color: #359bc5;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s;
+}
+.footer-inner .address:hover {
+  color: #f7f4ef;
+}
+.footer-inner .copyright {
+  color: #f7f4ef;
+}
+
+aside {
+  position: fixed;
+  right: 40px;
+  bottom: 60px;
+  z-index: 99;
+}
+aside button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #515151;
+  border: 0;
+  font-weight: 600;
+  color: #f7f4ef;
+  gap: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+aside button:hover {
+  background-color: #359bc5;
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 0%;
+  background-color: #ffd518;
+  z-index: 9999;
+  transition: width 0.1s;
+}
+
+@media screen and (max-width: 768px) {
+  aside {
+    right: 10px;
+    bottom: 10px;
+  }
+  aside button {
+    width: 45px;
+    height: 45px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
 html {
   font-size: 10px;
 }
@@ -183,7 +280,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 2rem;
   color: #1a1a1a;
   font-weight: 500;
@@ -204,7 +301,7 @@ body {
 .sec-inner h4,
 .sec-inner h5,
 .sec-inner h6 {
-  font-family: 'Anton', sans-serif;
+  font-family: "Anton", sans-serif;
   color: #f7f4ef;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -239,6 +336,7 @@ body {
   gap: 1rem;
   border-radius: 3rem;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .sec .btn-link:hover {
   background-color: #f7f4ef;
@@ -284,6 +382,7 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   top: 30%;
+  width: 100%;
 }
 .sec01 .sec-inner hgroup h2 {
   margin-bottom: 3rem;
@@ -321,7 +420,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .sec02 .sec-inner {
   padding: 0;
@@ -408,7 +507,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -467,7 +566,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   position: static;
   opacity: 1;
 }
@@ -517,16 +616,17 @@ body {
   width: 70rem;
 }
 .sec05 .img-card {
-  width: 50rem;
-  min-width: 50rem;
-  height: 40rem;
+  width: clamp(28rem, 70vw, 50rem);
+  min-width: clamp(28rem, 70vw, 50rem);
+  height: clamp(25rem, 50vw, 40rem);
+  margin-right: clamp(3rem, 8vw, 15rem);
   position: relative;
   will-change: transform;
-  margin-right: 15rem;
 }
 .sec05 .img-card .inner {
   background-color: #f7f4ef;
   padding: 1rem;
+  box-shadow: 0 10px 6px -6px #777;
 }
 .sec05 .img-card.active .inner {
   transform-origin: 50% 0%;
@@ -535,32 +635,37 @@ body {
   animation-iteration-count: 1;
 }
 .sec05 .img-card::after {
-  content: url(../images/tape.png);
+  content: "";
+  background-image: url(../images/tape.png);
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
-  top: 0;
+  top: -20px;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 3rem;
+  width: 12rem;
+  height: 12rem;
 }
 .sec05 .img-card:nth-child(odd) {
   transform: translateY(-10rem);
 }
 .sec05 .img-card .img-bx {
   width: 100%;
-  height: 35rem;
+  height: clamp(20rem, 42vw, 35rem);
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px inset;
 }
 .sec05 .img-card .img-bx img {
   width: 100%;
   height: 100%;
   display: block;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .sec05 .img-card p {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-top: 1rem;
-  font-family: 'Caveat', cursive;
+  font-family: "GangwonEducationHyunokSam";
 }
 
 @keyframes shake {
@@ -592,83 +697,77 @@ body {
     transform: rotate(0deg);
   }
 }
-.footer {
-  background-color: #515151;
-  min-height: 30rem;
-  width: 100%;
+@media screen and (max-width: 1440px) {
+  .sec-inner {
+    width: 100%;
+    height: 100%;
+    padding: 6rem;
+    box-sizing: border-box;
+  }
+  .sec-inner h1 {
+    font-size: 10rem;
+    line-height: 1.2;
+  }
+  .sec-inner h2 {
+    font-size: 8rem;
+    line-height: 1.2;
+  }
+  .sec-inner h5 {
+    font-size: 3rem;
+  }
+  .sec-inner h6 {
+    font-size: 2rem;
+  }
 }
-.footer-inner {
-  padding: 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+@media screen and (max-width: 768px) {
+  .sec-inner {
+    padding: 6rem;
+  }
+  .sec-inner h1 {
+    font-size: 10rem;
+    line-height: 1.2;
+  }
+  .sec-inner h2 {
+    font-size: 8rem;
+    line-height: 1.2;
+  }
+  .sec-inner h5 {
+    font-size: 3rem;
+  }
+  .sec-inner h6 {
+    font-size: 2rem;
+  }
 }
-.footer-inner .btn-link {
-  border: 1px solid #f7f4ef;
-  padding: 1rem 3rem;
-  color: #fff;
-  font-size: 2.2rem;
-  border-radius: 3rem;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  transition: all 0.3s;
-}
-.footer-inner .btn-link:hover {
-  scale: 1.1;
-  color: #1a1a1a;
-  background-color: #f7f4ef;
-}
-.footer-inner .address {
-  color: #359bc5;
-  font-weight: 600;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  transition: all 0.3s;
-}
-.footer-inner .address:hover {
-  color: #f7f4ef;
-}
-.footer-inner .copyright {
-  color: #f7f4ef;
-}
-
-aside {
-  position: fixed;
-  right: 40px;
-  bottom: 60px;
-  z-index: 99;
-}
-aside button {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #515151;
-  border: 0;
-  font-weight: 600;
-  color: #f7f4ef;
-  gap: 5px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  transition: all 0.3s;
-  cursor: pointer;
-}
-aside button:hover {
-  background-color: #359bc5;
-}
-
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 5px;
-  width: 0%;
-  background-color: #ffd518;
-  z-index: 9999;
-  transition: width 0.1s;
-} /*# sourceMappingURL=style.css.map */
+@media screen and (max-width: 576px) {
+  .sec-inner {
+    padding: 2rem;
+  }
+  .sec-inner h1 {
+    font-size: 8rem;
+    line-height: 1.2;
+  }
+  .sec-inner h2 {
+    font-size: 5rem;
+    line-height: 1.2;
+  }
+  .sec-inner h5 {
+    font-size: 3rem;
+  }
+  .sec-inner h6 {
+    font-size: 3rem;
+  }
+  .sec01 .sec-inner hgroup h2 {
+    font-size: 8rem;
+  }
+  .sec02 .cont {
+    padding: 4rem;
+    box-sizing: border-box;
+  }
+  .sec05 .horizontal-sliders {
+    padding-left: 5rem;
+  }
+  .sec05 .txt-card {
+    min-width: 50rem;
+    width: 50rem;
+  }
+}/*# sourceMappingURL=style.css.map */
