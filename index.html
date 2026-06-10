@@ -5,27 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeju Traverse</title>
     <link rel="stylesheet" href="./asstes/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   </head>
   <body>
     <main>
       <!-- top scroll bar -->
-       <div class="scroll-progress"></div>
+      <div class="scroll-progress"></div>
 
       <section class="container">
         <!-- secion01 -->
         <article class="sec sec01">
           <div class="sec-inner">
             <div class="top">
-              <a class="btn-link btn-youtube"  target="_blank"><i class="fa-brands fa-youtube"></i> YOUTUBE</a>
-              <a class="btn-link btn-instar"  target="_blank"><i class="fa-brands fa-instagram"></i> INSTARGRAM</a>
+              <div class="left">
+                <div class="lang">
+                  <i class="fa-solid fa-earth-americas"></i>
+                  <select id="lang-select">
+                    <option value="en">ENGLISH</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                  </select>
+                </div>
+              </div>
+              <div class="right">
+                <a class="btn-link btn-youtube" target="_blank">
+                  <i class="fa-brands fa-youtube"></i>
+                  YOUTUBE
+                </a>
+                <a class="btn-link btn-instar" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                  INSTARGRAM
+                </a>
+              </div>
             </div>
             <hgroup>
-              <h2 class="tit">Memories of<br> <span>Jeju Traverse</span></h2>
-              <h6>I'd like to share the thoughts and emotions<br> I experienced while traversing Jeju Island over 30 days.</h6>
+              <h2 class="tit" data-i18n="hero_title">Memories of Jeju Traverse</h2>
+              <h6 data-i18n="hero_sub">I'd like to share the thoughts and emotions I experienced while traversing Jeju Island over 30 days.</h6>
             </hgroup>
           </div>
         </article>
@@ -40,19 +55,23 @@
           </div>
           <div class="sec-inner">
             <div class="cont cont01">
-              <hgroup><h1>Memories of Joy in Jeju</h1></hgroup>
+              <hgroup>
+                <h1 data-i18n="sec02_title">Memories of Joy in Jeju</h1>
+              </hgroup>
               <div class="img-bx">
                 <img src="./asstes/images/sec02_02.png" alt="" />
               </div>
             </div>
             <div class="cont cont02">
               <hgroup>
-                <p>
-                 While I tried to travel on foot as much as possible, I occasionally hopped on a motorcycle to cover more ground.
-                <br><br>
-                 It was actually my first time riding one — but honestly, it was way easier than I expected, and twice as fun.
-                <br><br>
-                 If you're planning a trip to Jeju, take it as a challenge and rent a motorcycle. You won't regret it. 🏍️
+                <p data-i18n="sec02_desc">
+                  While I tried to travel on foot as much as possible, I occasionally hopped on a motorcycle to cover more ground.
+                  <br />
+                  <br />
+                  It was actually my first time riding one — but honestly, it was way easier than I expected, and twice as fun.
+                  <br />
+                  <br />
+                  If you're planning a trip to Jeju, take it as a challenge and rent a motorcycle. You won't regret it. 🏍️
                 </p>
               </hgroup>
             </div>
@@ -64,10 +83,7 @@
           <div class="sec03-bg"></div>
           <div class="sec-inner">
             <hgroup>
-              <h1 class="tit">
-                An Island Within<br>
-                <span class="point">an Island Udo</span>
-              </h1>
+              <h1 class="tit" data-i18n="sec03_title">An Island Within an Island Udo</h1>
             </hgroup>
           </div>
         </article>
@@ -82,41 +98,29 @@
           <div class="sec-inner">
             <div class="cont01 cont">
               <hgroup>
-                <h5>Udo is nothing short of magical.</h5>
-                <p>
-                  As someone who has spent most of my life in the city, stepping onto Udo felt like entering a completely different world. The crystal-clear turquoise waters, the endless fields of green, and the slow, unhurried pace of life — everything about this place felt beautifully foreign to me.
-                  There are no traffic lights, no towering buildings, no rush. Just the sound of the wind, the smell of the sea, and the kind of stillness you rarely find in the city.
-                  If you ever find yourself on Jeju Island, do yourself a favor — take the short ferry ride to Udo. It might just be the most memorable part of your trip.
-                </p>
+                <h5 data-i18n="sec04_h1">Udo is nothing short of magical.</h5>
+                <p data-i18n="sec04_p1">As someone who has spent most of my life in the city, stepping onto Udo felt like entering a completely different world. The crystal-clear turquoise waters, the endless fields of green, and the slow, unhurried pace of life — everything about this place felt beautifully foreign to me. There are no traffic lights, no towering buildings, no rush. Just the sound of the wind, the smell of the sea, and the kind of stillness you rarely find in the city. If you ever find yourself on Jeju Island, do yourself a favor — take the short ferry ride to Udo. It might just be the most memorable part of your trip.</p>
               </hgroup>
             </div>
             <div class="cont02 cont">
               <hgroup>
-                <h5>Udo is home to several stunning beaches,<br> each with its own unique charm.</h5>
-                <p>
-                  The eastern side of Jeju is renowned for its breathtaking emerald waters, and Udo — sitting at the very eastern tip of the island — takes that beauty to another level entirely.
-                  From almost every corner of Udo, you're greeted with unobstructed panoramic views of the ocean. The kind of view that makes you stop walking, put your phone down, and just breathe it all in.
-                  It's not just a beach. It's a reminder of how spectacular the natural world can be.
-                </p>
+                <h5 data-i18n="sec04_h2">Udo is home to several stunning beaches, each with its own unique charm.</h5>
+                <p data-i18n="sec04_p2">The eastern side of Jeju is renowned for its breathtaking emerald waters, and Udo — sitting at the very eastern tip of the island — takes that beauty to another level entirely. From almost every corner of Udo, you're greeted with unobstructed panoramic views of the ocean. The kind of view that makes you stop walking, put your phone down, and just breathe it all in. It's not just a beach. It's a reminder of how spectacular the natural world can be.</p>
               </hgroup>
             </div>
             <div class="cont03 cont">
               <hgroup>
-                <h5>They say Jeju Island is famous for its horses <br> and nowhere is that more true than in Udo.</h5>
-                <p>
-                  Wander through the quiet village roads and you might find yourself sharing the path with a horse, casually roaming through the countryside as if it owns the place.
-                  It's one of those unexpected little moments that makes Udo so special. No fences, no schedules — just horses living freely among the fields and the sea breeze.
-                  For a city person like me, it was honestly one of the most charming things I've ever seen. 🐴
-                </p>
+                <h5 data-i18n="sec04_h3">They say Jeju Island is famous for its horses and nowhere is that more true than in Udo.</h5>
+                <p data-i18n="sec04_p3">Wander through the quiet village roads and you might find yourself sharing the path with a horse, casually roaming through the countryside as if it owns the place. It's one of those unexpected little moments that makes Udo so special. No fences, no schedules — just horses living freely among the fields and the sea breeze. For a city person like me, it was honestly one of the most charming things I've ever seen. 🐴</p>
               </hgroup>
             </div>
             <div class="cont04 cont">
               <hgroup>
                 <h2>
-                  <span class="line">I'll be back.</span>
-                  <span class="line">No doubt.</span>
-                  <span class="line">Udo never</span>
-                  <span class="line">lets you go.</span>
+                  <span class="line" data-i18n="sec04_quote1">I'll be back.</span>
+                  <span class="line" data-i18n="sec04_quote2">No doubt.</span>
+                  <span class="line" data-i18n="sec04_quote3">Udo never</span>
+                  <span class="line" data-i18n="sec04_quote4">lets you go.</span>
                 </h2>
               </hgroup>
               <div class="img-bx">
@@ -130,17 +134,18 @@
         <article class="sec sec05">
           <div class="sec-inner horizontal-sliders">
             <hgroup class="card txt-card">
-              <h2>
-                Photos from my journey across Jeju.
-              </h2>
-              <a class="btn-link btn-instar"  target="_blank"><i class="fa-brands fa-instagram"></i> INSTARGRAM</a>
+              <h2 data-i18n="sec05_title">Photos from my journey across Jeju.</h2>
+              <a class="btn-link btn-instar" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+                INSTARGRAM
+              </a>
             </hgroup>
             <div class="card img-card">
               <div class="inner">
                 <div class="img-bx">
                   <img src="./asstes/images/sec05_01.jpg" alt="" />
                 </div>
-                <p>A family of Jeju ponies</p>
+                <p data-i18n="card01">A family of Jeju ponies</p>
               </div>
             </div>
             <div class="card img-card">
@@ -148,7 +153,7 @@
                 <div class="img-bx">
                   <img src="./asstes/images/sec05_02.jpg" alt="" />
                 </div>
-                <p>Horses roaming wild and free</p>
+                <p data-i18n="card02">Horses roaming wild and free</p>
               </div>
             </div>
             <div class="card img-card">
@@ -156,7 +161,7 @@
                 <div class="img-bx">
                   <img src="./asstes/images/sec05_03.jpg" alt="" />
                 </div>
-                <p>Cycling across Jeju</p>
+                <p data-i18n="card03">Cycling across Jeju</p>
               </div>
             </div>
             <div class="card img-card">
@@ -164,7 +169,7 @@
                 <div class="img-bx">
                   <img src="./asstes/images/sec05_04.jpg" alt="" />
                 </div>
-                <p>Braised hairtail fish — a Jeju classic</p>
+                <p data-i18n="card04">Braised hairtail fish — a Jeju classic</p>
               </div>
             </div>
             <div class="card img-card">
@@ -172,7 +177,7 @@
                 <div class="img-bx">
                   <img src="./asstes/images/sec05_05.jpg" alt="" />
                 </div>
-                <p>The famous dumplings of Olle Market</p>
+                <p data-i18n="card05">The famous dumplings of Olle Market</p>
               </div>
             </div>
             <div class="card img-card">
@@ -180,7 +185,7 @@
                 <div class="img-bx">
                   <img src="./asstes/images/sec05_06.jpg" alt="" />
                 </div>
-                <p>Best chicken skewers of my life</p>
+                <p data-i18n="card06">Best chicken skewers of my life</p>
               </div>
             </div>
             <div class="card img-card">
@@ -188,7 +193,7 @@
                 <div class="img-bx">
                   <img src="./asstes/images/sec05_07.jpg" alt="" />
                 </div>
-                <p>The three-wheeled motorcycle</p>
+                <p data-i18n="card07">The three-wheeled motorcycle</p>
               </div>
             </div>
             <div class="card img-card">
@@ -196,7 +201,7 @@
                 <div class="img-bx">
                   <img src="./asstes/images/sec05_08.jpg" alt="" />
                 </div>
-                <p>Everything I carried for a month</p>
+                <p data-i18n="card08">Everything I carried for a month</p>
               </div>
             </div>
             <div class="card img-card">
@@ -204,7 +209,7 @@
                 <div class="img-bx">
                   <img src="./asstes/images/sec05_09.jpg" alt="" />
                 </div>
-                <p>Warm and green — that's Udo</p>
+                <p data-i18n="card09">Warm and green — that's Udo</p>
               </div>
             </div>
             <div class="card img-card">
@@ -212,7 +217,7 @@
                 <div class="img-bx">
                   <img src="./asstes/images/sec05_10.jpg" alt="" />
                 </div>
-                <p>Jeju blooms even in April</p>
+                <p data-i18n="card10">Jeju blooms even in April</p>
               </div>
             </div>
           </div>
@@ -227,22 +232,26 @@
         </button>
       </aside>
     </main>
-    
+
     <!-- footer -->
     <footer class="footer">
       <div class="footer-inner">
-        <a class="btn-link btn-youtube"  target="_blank"><i class="fa-brands fa-youtube"></i>Watch on YouTube</a>
-        <a class="address" href="mailto: ddw9819@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i> ddw9819@gmail.com</a>
-        <p class="copyright">
-          Nomade Mavin © 2026 film, © 2026 website by
-          Youn Gwan Ho
-        </p>
+        <a class="btn-link btn-youtube" target="_blank">
+          <i class="fa-brands fa-youtube"></i>
+          Watch on YouTube
+        </a>
+        <a class="address" href="mailto: ddw9819@gmail.com" target="_blank">
+          <i class="fa-solid fa-envelope"></i>
+          ddw9819@gmail.com
+        </a>
+        <p class="copyright" data-i18n="footer_copy">Nomade Mavin © 2026 film, © 2026 website by Youn Gwan Ho</p>
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@latest/dist/lenis.min.js"></script>
+    <script src="./asstes/js/locales.js"></script>
     <script src="./asstes/js/main.js"></script>
   </body>
 </html>

@@ -48,6 +48,30 @@ const splitNodes = (el, className) => {
     .join('')
 }
 
+const splitSec02Title = (el) => {
+  el.innerHTML = el.textContent
+    .split('')
+    .map((char, i) => `<span class="char-s ${i % 2 === 0 ? 'even' : 'odd'}">${char === ' ' ? '&nbsp;' : char}</span>`)
+    .join('')
+}
+
+//////////////////////////////////////////
+// language (애니메이션보다 먼저 실행)
+//////////////////////////////////////////
+function setLang(lang) {
+  document.documentElement.setAttribute('lang', lang) // ← 추가
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.dataset.i18n
+    if (!i18n[lang][key]) return
+    el.innerHTML = i18n[lang][key].replace(/\n/g, '<br>')
+  })
+  localStorage.setItem('lang', lang)
+}
+
+const savedLang = localStorage.getItem('lang') || 'en'
+document.querySelector('#lang-select').value = savedLang
+setLang(savedLang) // ← 애니메이션 등록 전에 텍스트 먼저 세팅
+
 //////////////////////////////////////////
 // section01
 //////////////////////////////////////////
@@ -84,10 +108,7 @@ gsap.from('.sec01 h6', {
 // section02
 //////////////////////////////////////////
 const cont01Title = document.querySelector('.sec02 .cont01 hgroup h1')
-cont01Title.innerHTML = cont01Title.textContent
-  .split('')
-  .map((char, i) => `<span class="char-s ${i % 2 === 0 ? 'even' : 'odd'}">${char === ' ' ? '&nbsp;' : char}</span>`)
-  .join('')
+splitSec02Title(cont01Title)
 
 gsap.to('.sec02 .bg .ani', {
   scrollTrigger: { trigger: '.sec02', start: 'top top', end: '+=800', scrub: 1 },
@@ -99,8 +120,8 @@ gsap.utils.toArray('.sec02 .cont01 .char-s').forEach((char, i) => {
   gsap.from(char, {
     scrollTrigger: {
       trigger: '.sec02 .cont01',
-      start: `top+=${i * 30} 70%`, // 40 → 20
-      end: `top+=${i * 40 + 70} 70%`, // 60+90 → 20+50
+      start: `top+=${i * 30} 70%`,
+      end: `top+=${i * 40 + 70} 70%`,
       scrub: 1,
     },
     opacity: 0,
@@ -199,7 +220,7 @@ const scrollTween = gsap.to(slideItems, {
     pin: true,
     pinSpacing: true,
     scrub: 1,
-    end: '+=5000',
+    end: '+=2000',
   },
 })
 
@@ -226,12 +247,11 @@ document.querySelectorAll('.btn-link').forEach((btn) => {
 
 const btnTop = document.querySelector('.btn-top')
 gsap.set(btnTop, { opacity: 0, pointerEvents: 'none' })
-// btn elelevator
+
 btnTop.addEventListener('click', () => {
   lenis.scrollTo(0, { duration: 0.5 })
 })
 
-// hide section01 btn-top
 ScrollTrigger.create({
   trigger: '.sec01',
   start: 'top top',
@@ -243,7 +263,7 @@ ScrollTrigger.create({
 })
 
 //////////////////////
-//top scroll progress bar
+// top scroll progress bar
 //////////////////////
 const scrollProgress = document.querySelector('.scroll-progress')
 
@@ -253,4 +273,12 @@ lenis.on('scroll', ({ progress }) => {
     duration: 0.1,
     ease: 'none',
   })
+})
+
+//////////////////////////////////////////
+// 언어 전환 이벤트 (언어 변경 시 새로고침)
+//////////////////////////////////////////
+document.querySelector('#lang-select').addEventListener('change', (e) => {
+  localStorage.setItem('lang', e.target.value)
+  location.reload() // 페이지 새로고침으로 모든 애니메이션 재등록
 })

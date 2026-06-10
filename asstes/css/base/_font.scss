@@ -1,7 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&display=swap');
+
 @font-face {
   font-family: 'GangwonEducationHyunokSam';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduHyeonokT_OTFMediumA.woff') format('woff');
   font-weight: normal;
   font-display: swap;
+}
+
+// 언어별 폰트 적용
+:lang(ko) h1,
+:lang(ko) h2,
+:lang(ko) h3,
+:lang(ko) h4,
+:lang(ko) h5,
+:lang(ko) h6,
+:lang(ko) .tit {
+  font-family: 'Black Han Sans', sans-serif !important;
 }

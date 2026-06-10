@@ -59,6 +59,7 @@ body {
       color: $white-color;
       letter-spacing: 1.5px;
       text-transform: uppercase;
+      word-break: keep-all;
     }
 
     h1 {
@@ -73,6 +74,7 @@ body {
 
     h5 {
       font-size: 4rem;
+      line-height: 1.5;
     }
     h6 {
       font-size: 3rem;
@@ -134,8 +136,42 @@ body {
 
   .sec-inner {
     .top {
-      @include flex-end;
+      @include flex-between;
       gap: 2rem;
+      .lang {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        padding: 1rem 2rem;
+        height: 5rem;
+        box-sizing: border-box;
+        color: $white-color;
+        @include flex-center;
+        gap: 1rem;
+        border-radius: 3rem;
+        transition: all 0.3s;
+        background-color: $gray-color;
+
+        cursor: pointer;
+        select {
+          background: none;
+          border: none;
+          color: $white-color;
+          font-size: 2rem;
+          option {
+            color: $gray-color;
+            font-size: 1.5rem;
+          }
+        }
+        i {
+          background-color: 0;
+        }
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
     }
 
     hgroup {
@@ -404,6 +440,7 @@ body {
   hgroup {
     h2 {
       margin-bottom: 3rem;
+      word-break: keep-all;
     }
   }
 

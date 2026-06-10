@@ -1,10 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&display=swap");
 @font-face {
   font-family: "GangwonEducationHyunokSam";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduHyeonokT_OTFMediumA.woff") format("woff");
   font-weight: normal;
   font-display: swap;
 }
+:lang(ko) h1,
+:lang(ko) h2,
+:lang(ko) h3,
+:lang(ko) h4,
+:lang(ko) h5,
+:lang(ko) h6,
+:lang(ko) .tit {
+  font-family: "Black Han Sans", sans-serif !important;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -173,6 +184,7 @@ img {
   align-items: center;
   gap: 1rem;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .footer-inner .btn-link:hover {
   scale: 1.1;
@@ -305,6 +317,7 @@ body {
   color: #f7f4ef;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  word-break: keep-all;
 }
 .sec-inner h1 {
   font-size: 15rem;
@@ -316,6 +329,7 @@ body {
 }
 .sec-inner h5 {
   font-size: 4rem;
+  line-height: 1.5;
 }
 .sec-inner h6 {
   font-size: 3rem;
@@ -372,7 +386,43 @@ body {
 .sec01 .sec-inner .top {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.sec01 .sec-inner .top .lang {
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 2rem;
+  height: 5rem;
+  box-sizing: border-box;
+  color: #f7f4ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 3rem;
+  transition: all 0.3s;
+  background-color: #515151;
+  cursor: pointer;
+}
+.sec01 .sec-inner .top .lang select {
+  background: none;
+  border: none;
+  color: #f7f4ef;
+  font-size: 2rem;
+}
+.sec01 .sec-inner .top .lang select option {
+  color: #515151;
+  font-size: 1.5rem;
+}
+.sec01 .sec-inner .top .lang i {
+  background-color: 0;
+}
+.sec01 .sec-inner .top .right {
+  display: flex;
+  align-items: center;
   gap: 2rem;
 }
 .sec01 .sec-inner hgroup {
@@ -610,6 +660,7 @@ body {
 }
 .sec05 hgroup h2 {
   margin-bottom: 3rem;
+  word-break: keep-all;
 }
 .sec05 .txt-card {
   min-width: 70rem;
